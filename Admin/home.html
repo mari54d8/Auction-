@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main class="auctions">
+        <table class="auctions__list">
+            <thead>
+                <tr>
+                    <th>Status</th>
+                    <th>Name</th>
+                    <th>Expiry Date</th>
+                    <th>Highest bid</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <!-- here the data as <td> -->
+                    <td>
+                        <button class="button button__admin button__admin--showBids">show all bids</button>
+                    </td>
+                    <td>
+                        <button class="button button__admin button__admin--editProduct">edit</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <button class="button button__admin button__admin--createNeAuctionw">create a new auction</button>
+    <section class="allBids">
+        <table class="allBids__bidList">
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Bid</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <!-- Data (username, bid, when) here in <td> -->
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</body>
+</html>
