@@ -1,0 +1,93 @@
+html{
+    font-family: "Roboto", sans-serif;
+}
+body{
+    margin: 0px;
+    background: #E5D1BE;
+}
+/*---------header----------*/
+.auctionHeader{
+    background: #DCC0A5;
+    padding: 64px;
+    text-align: center;
+}
+.auctionHeader__title{
+    color: #321F1C;
+    font-family: "Italiana", sans-serif;
+    font-size: 64px;
+    font-weight: 400;
+    margin: 0;
+}
+.auctionHeader__subtitle{
+    color: #372421;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+/*----------Auction Data---------*/
+.auction{
+    padding: 109px;
+}
+.auction__titles{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 204px;
+    margin-left: 9px;
+}
+.auction__title{
+    font-size: 20px;
+    font-weight: 700;
+}
+.auction__data{
+    display: grid;
+    grid-template-columns: 9px 1fr 1fr 1fr 1fr 1fr 1fr 204px;
+    border-radius: 8px;
+    background: var(--Colors-design-palette-light-peach, #FFFBF8);
+    box-shadow: 2px 2px 10px 0px rgba(164, 136, 110, 0.50);
+    align-items: center;
+}
+.auction__seperator{
+    display: block;
+    width: 100% ;
+    height: 1px;
+    background: rgba(56, 31, 27, 0.31);
+    margin: auto;
+    margin-bottom: 14px;
+    margin-top: 14px;
+}
+.auction__categoryColor{
+    width: 9px;
+    height: 69px;
+    border-radius: var(--Radius-small, 4px) 0px 0px var(--Radius-small, 4px);
+    background: #8C0000;
+    border-radius: 4px, 0, 0, 4px;
+}
+.button__admin--showBids{
+    font-size: 16px;
+    display: inline-flex;
+    padding: 10px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+    border: 1px solid var(--Colors-design-palette-ocre, #B97F48);
+    background: var(--Colors-design-palette-ocre, #B97F48);
+    color: white;
+}
+.button__admin--editProduct{
+    border-radius: 4px;
+    border: 1px solid #B97F48;
+    display: inline-flex;
+    padding: 8px;
+    align-items: flex-start;
+    background: var(--Colors-design-palette-light-peach, #FFFBF8);
+}
+.auction__buttons{
+    display: flex;
+    justify-content: space-evenly;
+}
+.button__icon{
+    width: 23px;
+}
+.auction__statusIcon{
+    margin-left: 21px;
+}
