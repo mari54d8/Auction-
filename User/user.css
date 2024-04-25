@@ -1,4 +1,8 @@
 /*----------User----------*/
+html{
+    font-family: "italiana", sans-serif;
+}
+
 body{
     background: var(--Colors-design-palette-brown-900, #1A1616);
     margin: 0px;
@@ -244,6 +248,88 @@ body{
     right: 0;
     bottom: 0;
 }
+
+/* ----------cart-------- */
+.close{
+    width: 35px;
+    margin: 10px;
+}
+
+.cart{
+    width: 485px;
+    background-color: #E5D1BE;
+    position: fixed;
+    inset: 0 -485px 0 auto;
+    
+}
+
+body.showCart .cart{
+    top: 0 ;
+    bottom: 0;
+    right: 0;
+
+}
+.cart__header{
+    font-size: 48px;
+    font-weight: lighter;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.cart__line{
+    display: block;
+    height: 2px;
+    width: 210px;
+    background-color: black;
+    margin: auto;
+}
+
+.item{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 45px;
+    padding: 0;
+}
+
+.item__title{
+    font-size: 32px;
+    margin-left: -75px;
+    margin-top: -6px;
+}
+.item__subtitle{
+    font-size: 20px;
+    margin-left: -75px;
+    margin-top: -20px;
+}
+.item__image{
+    width: 105px;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+
+.item__price{
+    font-size: 24px;
+    color: #E18632;
+    margin-left: -75px;
+    margin-top: 22px;
+    font-family: "Istok Web";
+    
+}
+.yourPrice{
+    font-size: 20px;
+    margin-left: -75px;
+    margin-top: -20px;
+    font-family: "Istok Web";
+}
+.item__countdown{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    font-size: 20px;
+    color: #E54646;
+    font-family: "Istok Web";
+    margin-top: -7px;
+}
+
 /*----------Article left----------*/
 .productCard--left{
     background-position: bottom 46px right 0px;
