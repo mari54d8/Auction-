@@ -187,7 +187,7 @@ body{
     margin-bottom: 235px;
     margin-left: 136px;
 }
-.productCard__title{
+.productCard__artist{
     color: var(--Colors-Text-on_Background_primary, #E5D1BE);
     font-size: 48px;
     display: flex;
@@ -211,7 +211,7 @@ body{
     margin-top: 21px;
     margin-left: 10px;
 }
-.productCard__describtion{
+.productCard__description{
     color: var(--Colors-Text-on_Background_primary, #E5D1BE);
     font-size: 20px;
     width: 457px;
@@ -335,7 +335,7 @@ body.showCart .cart{
     margin: 0;
     width: 967px;
 }
-.productCard__title--left{
+.productCard__artist--left{
     background: var(--Colors-design-palette-brown-900, #1A1616);
 }
 .productCard__image--left{
