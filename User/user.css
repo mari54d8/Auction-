@@ -1,0 +1,429 @@
+/*----------User----------*/
+body{
+    background: var(--Colors-design-palette-brown-900, #1A1616);
+    margin: 0px;
+}
+
+/*----------Login----------*/
+.login{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-image: url(images/login_Ellipse\ 3.png), url(images/login_Ellipse\ 2.png), url(images/login_Ellipse\ 3.svg);
+    background-repeat: no-repeat;
+    background-position:
+    bottom right,
+    top right,
+    left;
+}
+.formContainer{
+    margin: auto;
+    width: 400px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.loginForm{
+    display: flex;
+    flex-direction: column;
+}
+.login__label{
+    font-size: 24px;
+    color: #FFFFFF;
+    padding-left: 2px;
+    padding-bottom: 4px;
+}
+.login__input{
+    border-style: none;
+    width: 400px;
+    height: 59px;
+    border-radius: var(--Radius-small, 4px);
+    background: #E5D1BE;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+}
+.buttons{
+    display: flex;
+    align-items: flex-start;
+    gap: var(--Spacing-x-large, 32px);
+    padding-top: 16px;
+}
+.login__button{
+    display: flex;
+    min-width: 184px;
+    padding: 12px var(--Spacing-x-large, 32px);
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: var(--Radius-small, 4px);
+    background: #FAA85C;
+    font-size: var(--Spacing-large, 24px);
+    border-style: none;
+}
+.signUp__button{
+    display: flex;
+    min-width: 184px;
+    padding: 12px var(--Spacing-x-large, 32px);
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: var(--Radius-small, 4px);
+    border: 1px solid #FAA85C;
+    background: none;
+    color: #E5D1BE;
+    font-size: var(--Spacing-large, 24px);
+}
+
+
+
+
+
+/*----------Paintings----------*/
+.line1{
+    display: block;
+    height: 1px;
+    width: 336px;
+    background-color: #FFFFFF;
+}
+.line2{
+    display: block;
+    height: 1px;
+    width: 318px;
+    background-color: #FFFFFF;
+}
+.line3{
+    display: block;
+    position: absolute;
+    height: 857px;
+    width: 1px;
+    background-color: #FFFFFF;
+    top: -234px;
+    left: 0px;
+}
+.line4{
+    display: block;
+    position: absolute;
+    height: 1px;
+    width: 612px;
+    background-color: #FFFFFF;
+    top: 801px;
+    right: -54px;
+}
+.line5{
+    display: block;
+    position: absolute;
+    height: 802px;
+    width: 1px;
+    background-color: #FFFFFF;
+    top: 740px;
+    right: 0px;
+}
+/*----------Header----------*/
+.paintingsBody {
+    font-family: "Italiana", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-image: url(images/products_Ellipse1.png), url(images/products_Ellipse2.png), url(images/products_Ellipse3.png);
+    background-repeat: no-repeat;
+    background-position:
+    top right,
+    top 187px left,
+    top 750px right;
+  }
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 48px 48px;
+}
+.header__logoLink{
+    text-decoration: none;
+}
+.header__logo{
+    width: 299px;
+    height: 38px;
+    flex-shrink: 0;
+}
+.navBar{
+    display: flex;
+    gap: var(--Spacing-x-large, 32px);
+}
+.navBar__item{
+    color: #E2D3C7;
+    font-size: 24px;
+    text-decoration: none;
+}
+/*----------Main----------*/
+.products__headline{
+    color: var(--Colors-Text-on_Background_primary, #E5D1BE);
+    font-size: 128px;
+    font-weight: 400;
+    text-align: center;
+    margin: 0px 44px;
+}
+.products__headlineContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0px;
+    margin-bottom: 112px;
+}
+.products{
+    width: 1103px;
+    margin: auto;
+    position: relative;
+}
+/*----------Product card----------*/
+.productCard{
+    width: 926px;
+    height: 616px;
+    display: flex;
+    background-image: url(images/Rectangle\ 44.svg);
+    background-repeat: no-repeat;
+    background-position: bottom 46px left 0px;
+    padding-left: 31px;
+    position: relative;
+    margin-bottom: 235px;
+    margin-left: 136px;
+}
+.productCard__title{
+    color: var(--Colors-Text-on_Background_primary, #E5D1BE);
+    font-size: 48px;
+    display: flex;
+    width: fit-content;
+    height: 77px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(87deg, #241A19 0%, #201918 14.35%, #1F1818 19.76%, #1D1817 28.35%, #1B1717 35.82%, #1A1616 100%);
+    font-weight: 400;
+    margin: 0px;
+    margin-top: 202px;
+}
+.productCard__countdown{
+    color: var(--Colors-Text-Accent, #FAA85C);
+    font-size: 32px;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    margin: 0px;
+    margin-top: 21px;
+    margin-left: 10px;
+}
+.productCard__describtion{
+    color: var(--Colors-Text-on_Background_primary, #E5D1BE);
+    font-size: 20px;
+    width: 457px;
+    font-family: "Roboto", sans-serif;
+    margin: 0px;
+    margin-top: 13px;
+    margin-left: 10px;
+}
+.productCard__button{
+    color: var(--Colors-Text-on_Container_primary, #1A1616);
+    font-size: 32px;
+    border-style: none;
+    display: flex;
+    width: 217px;
+    height: 66px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: var(--Radius-medium, 8px);
+    background: var(--Colors-Container-Button-primary, #FAA85C);
+    margin: 0px;
+    margin-top: 55px;
+    margin-left: 10px;
+}
+.productCard__image{
+    border-radius: 8px;
+    margin-bottom: 16px;
+    margin-left: 43px;
+}
+.productCard__imageFrame{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+/*----------Article left----------*/
+.productCard--left{
+    background-position: bottom 46px right 0px;
+    padding: 0;
+    margin: 0;
+    width: 967px;
+}
+.productCard__title--left{
+    background: var(--Colors-design-palette-brown-900, #1A1616);
+}
+.productCard__image--left{
+    margin-left: 16px;
+    margin-right: 43px;
+}
+.productCard__imageFrame--left{
+    left: 0;
+}
+/*----------footer----------*/
+.footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 68px;
+    color: var(--Colors-Text-on_Background_primary, #E5D1BE);
+    font-family: "Roboto", sans-serif;
+    margin-top: 230px;
+}
+.adress__text{
+    font-size: 20px;
+    margin: 0px;
+    font-style: normal;
+}
+.contact__text{
+    font-size: 20px;
+    text-align: right;
+    margin: 0px;
+    font-style: normal;
+}
+
+
+
+
+
+/*----------Product----------*/
+/*---------Background----------*/
+.productBody{
+    background-image: url(images/login_Ellipse\ 3.png), url(images/login_Ellipse\ 2.png), url(images/login_Ellipse\ 3.svg);
+    background-repeat: no-repeat;
+    background-position:
+    bottom right,
+    top right,
+    left;
+}
+/*----------Main----------*/
+.product__line1{
+    display: block;
+    position: absolute;
+    height: 1px;
+    width: 609px;
+    background-color: #FFFFFF;
+    left: 72px;
+    top: 76px;
+}
+.product__line2{
+    display: block;
+    position: absolute;
+    height: 103px;
+    width: 1px;
+    background-color: #FFFFFF;
+    left: 72px;
+    top: 76px;
+}
+.product__line3{
+    display: block;
+    position: absolute;
+    height: 487px;
+    width: 1px;
+    background-color: #FFFFFF;
+    bottom: 0;
+    left: 72px;
+}
+.product__line4{
+    display: block;
+    position: absolute;
+    height: 1px;
+    width: 809px;
+    background-color: #FFFFFF;
+    bottom: 0;
+    left: 72px;
+}
+.product__line5{
+    display: block;
+    position: absolute;
+    height: 173px;
+    width: 1px;
+    background-color: #FFFFFF;
+    bottom: 0;
+    right: 200px;
+}
+.product{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin: auto;
+    width: 1081px;
+    padding-bottom: 68px;
+    margin-bottom: 68px;
+}
+.product__title{
+    color: var(--Colors-Text-on_Background_primary, #E5D1BE);
+    font-size: 96px;
+    font-weight: 400;
+    margin: 0px;
+    padding-top: 179px;
+}
+.product__subtitle{
+    color: var(--Colors-Text-on_Background_primary, #E5D1BE);
+    font-size: 36px;
+    font-weight: 400;
+    margin: 0px;
+    line-height: 120%;
+    padding-left: 120px;
+    padding-bottom: 48px;
+}
+.product__description{
+    color: var(--Colors-Text-on_Background_primary, #E5D1BE);
+    font-size: 24px;
+    font-family: "Roboto", sans-serif;
+    max-width: 456px;
+    padding-left: 120px;
+    margin: 0px;
+    margin-bottom: 45px;
+}
+.product__countdown{
+    font-family: "Roboto", sans-serif;
+    color: var(--Colors-Text-Accent, #FAA85C);
+    font-size: 24px;
+    padding-left: 120px;
+    margin: 0px;
+}
+.product__prize{
+    font-family: "Roboto", sans-serif;
+    color: var(--Colors-Text-on_Background_primary, #E5D1BE);
+    font-size: 40px;
+    font-weight: 400;
+    padding-left: 120px;
+    margin: 0px;
+    margin-bottom: 46px;
+}
+.button{
+    font-family: "Roboto", sans-serif;
+    border-radius: var(--Radius-medium, 8px);
+    background: var(--Colors-Container-Button-primary, #FAA85C);
+    display: flex;
+    padding: 10px var(--Spacing-x-large, 32px);
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-style: none;
+    font-size: 32px;
+    margin-left: 64px;
+}
+.button__bid--little{
+    margin-left: 120px;
+}
+.button__bid--big{
+    margin-right: 436px;
+}
+.product__bidOptions{
+    display: flex;
+    flex-direction: row;
+}
+.product__image{
+    position: absolute;
+    right: 16px;
+    top: 0;
+    border-radius: 8px;
+    z-index: -1;
+}
+.product__imageFrame{
+    position: absolute;
+    right: 0;
+    top: 16px;
+}
