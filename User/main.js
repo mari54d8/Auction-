@@ -4,17 +4,17 @@
  *  buttons: kom videre til "paintings"
  */
 
-const loginEmail = document.querySelector(".login__email");
-const buttonLogin = document.querySelector(".login__button");
-buttonLogin.addEventListener('click', login);
+// const loginEmail = document.querySelector(".login__email");
+// const buttonLogin = document.querySelector(".login__button");
+// buttonLogin.addEventListener('click', login);
 
-function login() {
-    const userName = loginEmail.value;
-    console.log(userName);
+// function login() {
+//     const userName = loginEmail.value;
+//     console.log(userName);
 
-    window.location.href = 'paintings.html';
-    window.reload();
-}
+//     window.location.href = 'paintings.html';
+//     window.reload();
+// }
 
 
 /** --------------- sæt data ind i vores product page ----------------
@@ -25,11 +25,11 @@ function login() {
 // PART 1 – GET THE JSON FILES THROUGH A HTTP URL
 // –––––––––––––––––––––––––––––––––––––––––––––––––––
 
-const allItems = 'http://roundhouse.proxy.rlwy.net:54600/items';
+
 //  This function is used for loading a JSON file from an URL
 function getJSON(allItems) {
     // Make a GET request using the Fetch API
-    fetch(allItems)
+    fetch('http://roundhouse.proxy.rlwy.net:54600/items')
       .then((response) => {
         if (!response.ok) {
           // If the request does not return 300 OK
@@ -54,19 +54,11 @@ function getJSON(allItems) {
   
   // This handles the received data and formats into an item object
   function formatData(data) {
+    console.log(data[1].artTitle);
     // Loop through items
-    for (const item of data.items) {
-      console.log("Working on item", item);
-  
-      // Create output
-      let output = {};
-      output.title = item.title;
-      output.description = item.description;
-      output.currentPrice = item.actualPrice;
-      output.expires = item.expires;
-  
-      // Send object to function that populates the DOM
-      populateDOM(output);
+    for (const product of data) {
+      console.log("Working on item", product);
+      populateDOM(product);
     }
   }
   
@@ -75,31 +67,44 @@ function getJSON(allItems) {
   // –––––––––––––––––––––––––––––––––––––––––––––––––––
   //  Receives the formatted data as item object
   //  and inserts it into the DOM
+  // !!!!!!! få fat i kategorien: kategori 1 = painting, kategori 2 = statue
   
-  function populateDOM(item) {
+  getJSON();
+
+  function populateDOM(product) {
     // Update the DOM with the received data
   
-    console.log("Populating with this item", item);
+    console.log("Populating with this item", product);
   
     // Create DOM element
     let productCard = document.createElement("article");
     productCard.classList.add("productCard");
-  
+    
     productCard.innerHTML = `
-    <h2 class="productCard__title">${item.title}</h2>
-    <p class="productCard__describtion">${item.description}</p>
-    <h3 class="productCard__countdown">${item.expiryDate}</h3>
+    <section class="productCard__information">
+    <h2 class="productCard__artist">${product.artist}</h2>
+    <h3 class="productCard__title">${product.artTitle}</h3>
+    <p class="productCard__description">${product.description}</p>
+    <h3 class="productCard__countdown">${product.expiryDate}</h3>
     <button class="productCard__bid">Byd</button>
+    </section>
     `;
   
-    document.querySelector(".products").appendChild(element);
+    document.querySelector(".products").appendChild(productCard);
   }
   
 
-/** ------------------ see details på productCard -----------------
- * 
+/** ------------------ "see details" på productCard -----------------
+ *
  *  få fat i button
  *  få fat i productCard af selve button
  *  flyt til anden side
  *  append selve productCard der
+ */
+
+
+
+/** ----------------- vis selve productCard i product.html
+ * 
+ * clone 
  */
