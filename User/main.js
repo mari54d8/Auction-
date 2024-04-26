@@ -1,34 +1,9 @@
-// ------------------ login side ---------------------
-/**
- *  få fat i brugernavnet 
- *  buttons: kom videre til "paintings"
- */
 
-// const loginEmail = document.querySelector(".login__email");
-// const buttonLogin = document.querySelector(".login__button");
-// buttonLogin.addEventListener('click', login);
-
-// function login() {
-//     const userName = loginEmail.value;
-//     console.log(userName);
-
-//     window.location.href = 'paintings.html';
-//     window.reload();
-// }
+// ---------------- get data --------------
 
 
-/** --------------- sæt data ind i vores product page ----------------
- * 
- * 
-*/
-// –––––––––––––––––––––––––––––––––––––––––––––––––––
-// PART 1 – GET THE JSON FILES THROUGH A HTTP URL
-// –––––––––––––––––––––––––––––––––––––––––––––––––––
-
-
-//  This function is used for loading a JSON file from an URL
 function getJSON(allItems) {
-    // Make a GET request using the Fetch API
+   
     fetch('http://roundhouse.proxy.rlwy.net:54600/items')
       .then((response) => {
         if (!response.ok) {
@@ -40,7 +15,7 @@ function getJSON(allItems) {
       .then((data) => {
         // Pass the received data on to the function that formats it
         console.log("Data received:", data);
-        formatData(data);
+        addData(data);
       })
       .catch((error) => {
         // Handle errors
@@ -48,63 +23,85 @@ function getJSON(allItems) {
       });
   }
   
-  // –––––––––––––––––––––––––––––––––––––––––––––––––––
-  // PART 2 – FORMAT THE DATA AS YOU WANT IT TO BE
-  // –––––––––––––––––––––––––––––––––––––––––––––––––––
-  
-  // This handles the received data and formats into an item object
-  function formatData(data) {
-    console.log(data[1].artTitle);
-    // Loop through items
-    for (const product of data) {
-      console.log("Working on item", product);
-      populateDOM(product);
+// ------------------ add Data into the DOM -----------------
+// vanskelighed: even produkter skal vises på højre side, odd på venstre side
+function addData(data) {
+
+  // hvis det er et even element -> udføre denne funktion, hvis ikke -> udfør anden funktion
+    for (let i = 0; i < data.length; i ++) {
+      if (i%2 === 0) {
+          addEvenProduct(data[i])  
+          // data[i] er så et enkelt element/produkt, vi overgiver til funktionen
+      } else {
+          addOddProduct(data[i])
+      }
     }
   }
-  
-  // –––––––––––––––––––––––––––––––––––––––––––––––––––
-  // PART 3 – INSERT DATA IN THE DOM
-  // –––––––––––––––––––––––––––––––––––––––––––––––––––
-  //  Receives the formatted data as item object
-  //  and inserts it into the DOM
-  // !!!!!!! få fat i kategorien: kategori 1 = painting, kategori 2 = statue
-  
-  getJSON();
 
-  function populateDOM(product) {
-    // Update the DOM with the received data
-  
-    console.log("Populating with this item", product);
-  
-    // Create DOM element
+function addEvenProduct(product) {
+// har ikke brug for en loop her, fordi funktionen kun får overgivet ET produkt
     let productCard = document.createElement("article");
     productCard.classList.add("productCard");
     
     productCard.innerHTML = `
     <section class="productCard__information">
-    <h2 class="productCard__artist">${product.artist}</h2>
-    <h3 class="productCard__title">${product.artTitle}</h3>
-    <p class="productCard__description">${product.description}</p>
-    <h3 class="productCard__countdown">${product.expiryDate}</h3>
-    <button class="productCard__bid">Byd</button>
+      <h2 class="productCard__artist">${product.artist}</h2>
+      <h3 class="productCard__title">${product.artTitle}</h3>
+      <h3 class="productCard__countdown">${product.expiryDate}</h3>
+      <p class="productCard__description">${product.description}</p>
+      <a class="productCard__seeDetails" href="product.html?id=${product.id}">See details</a>
+    <img class="productCard__imageFrame" src="images/Rectangle 45.png" alt="">
     </section>
     `;
-  
+    
     document.querySelector(".products").appendChild(productCard);
-  }
+
+}
+
+function addOddProduct(product) {
+
+      let productCard = document.createElement("article");
+      productCard.classList.add("productCard");
+      productCard.classList.add('productCard--left');
+      
+      productCard.innerHTML = `
+      <section class="productCard__information productCard__information--left">
+        <h2 class="productCard__artist productCard__artist--left">${product.artist}</h2>
+        <h3 class="productCard__title">${product.artTitle}</h3>
+        <h3 class="productCard__countdown productCard__countdown--left">${product.timeLeft}</h3>
+        <p class="productCard__description productCard__description--left">${product.description}</p>
+        <a class="productCard__seeDetails productCard__seeDetails--left" href="product.html?id=${product.id}">See details</a>
+      </section>
+      <img class="productCard__imageFrame productCard__imageFrame--left" src="images/Rectangle 45.png" alt=""></img>
+      `;
+    
+      document.querySelector(".products").appendChild(productCard);
+
+}
+
+  getJSON();
   
+// <img class="productCard__image" src="${product.image}">
+//<img class="productCard__image productCard__image--left" src="${product.image}">
 
 /** ------------------ "see details" på productCard -----------------
- *
- *  få fat i button
- *  få fat i productCard af selve button
- *  flyt til anden side
- *  append selve productCard der
  */
 
 
 
-/** ----------------- vis selve productCard i product.html
- * 
- * clone 
- */
+
+
+// -------------------- open my bids --------------------------
+
+let myBids = document.querySelector('.myBids');
+let body = document.querySelector('body');
+let close = document.querySelector('.close');
+
+
+myBids.addEventListener('click', () => {
+  body.classList.toggle('showCart');
+});
+
+close.addEventListener('click', () => {
+  body.classList.toggle('showCart');
+})

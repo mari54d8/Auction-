@@ -215,26 +215,29 @@ body{
     color: var(--Colors-Text-on_Background_primary, #E5D1BE);
     font-size: 20px;
     width: 457px;
+    height: 50px;
     font-family: "Roboto", sans-serif;
     margin: 0px;
     margin-top: 13px;
     margin-left: 10px;
+    overflow: hidden;
 }
-.productCard__button{
+.productCard__seeDetails{
     color: var(--Colors-Text-on_Container_primary, #1A1616);
     font-size: 32px;
+    font-family: "Roboto", sans-serif;
     border-style: none;
     display: flex;
     width: 217px;
     height: 66px;
     justify-content: center;
     align-items: center;
-    gap: 10px;
     border-radius: var(--Radius-medium, 8px);
     background: var(--Colors-Container-Button-primary, #FAA85C);
     margin: 0px;
     margin-top: 55px;
     margin-left: 10px;
+    text-decoration: none;
 }
 .productCard__image{
     border-radius: 8px;
