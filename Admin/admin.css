@@ -50,9 +50,7 @@ body{
     width: 100% ;
     height: 1px;
     background: rgba(56, 31, 27, 0.31);
-    margin: auto;
     margin-bottom: 14px;
-    margin-top: 14px;
 }
 .auction__categoryColor{
     width: 9px;
@@ -90,4 +88,16 @@ body{
 }
 .auction__statusIcon{
     margin-left: 21px;
+}
+.button__admin--createNeAuction{
+    border-radius: var(--Radius-small, 4px);
+    background: var(--Colors-design-palette-ocre, #B97F48);
+    display: flex;
+    padding: var(--Spacing-medium, 16px) var(--Spacing-large, 24px);
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    color: #FFF;
+    border-style: none;
 }
