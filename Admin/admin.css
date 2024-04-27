@@ -44,6 +44,7 @@ body{
     background: var(--Colors-design-palette-light-peach, #FFFBF8);
     box-shadow: 2px 2px 10px 0px rgba(164, 136, 110, 0.50);
     align-items: center;
+    margin-bottom: 16px;
 }
 .auction__seperator{
     display: block;
@@ -100,4 +101,86 @@ body{
     font-size: 24px;
     color: #FFF;
     border-style: none;
+    position: fixed;
+    bottom: 64px;
+    right: 109px;
+}
+
+/*----------Create Auction----------*/
+.createAuction{
+    padding: 64px;
+}
+.createAuction__form{
+    display: grid;
+    grid-template-columns: 1fr 1fr 300px;
+    
+}
+.createAuction__label{
+    color: var(--Colors-Text-on_Background_secondary, #1A1616);
+    font-size: 24px;
+    padding-left: 4px;
+    font-weight: 400;
+    margin: 0;
+}
+.createAuction__data{
+    display: flex;
+    flex-direction: column;
+    padding: 0 32px 32px 32px;
+}
+.createAuction__input{
+    border-style: none;
+    font-size: 24px;
+    border-radius: var(--Radius-small, 4px);
+    background: var(--Colors-Container-primary, #FFFBF8);
+    box-shadow: 2px 2px 10px 0px rgba(164, 136, 110, 0.50);
+    padding: 19px;
+}
+.createAuction__select{
+    border-style: none;
+    font-size: 24px;
+    border-radius: var(--Radius-small, 4px);
+    background: var(--Colors-Container-primary, #FFFBF8);
+    box-shadow: 2px 2px 10px 0px rgba(164, 136, 110, 0.50);
+    padding: 19px;
+}
+.createAuction__button{
+    border-radius: var(--Radius-small, 4px);
+    background: var(--Colors-design-palette-ocre, #B97F48);
+    display: flex;
+    padding: var(--Spacing-medium, 16px) var(--Spacing-large, 24px);
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 240px;
+    height: 66px;
+    font-size: 24px;
+    color: #FFF;
+    border-style: none;
+    box-shadow: 2px 2px 10px 0px rgba(164, 136, 110, 0.50);
+    margin: 119px 32px 32px 32px;
+}
+.createAuction__data .--description{
+    height: 247px;
+}
+.createAuction__input.--upload {
+    border-radius: var(--Radius-small, 4px);
+    border: 1px solid #424141;
+    background: #BDBDBD;
+    display: flex;
+    padding: 10px 18px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #5A5A5A;
+    font-size: 24px;
+}
+.createAuction__label.--upload{
+    width: 408px;
+    height: 539px;
+    border-radius: var(--Radius-small, 4px);
+    background: var(--Colors-design-palette-light-grey, #E7E7E7);
+    box-shadow: 2px 2px 10px 0px rgba(164, 136, 110, 0.50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

@@ -4,35 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <form class="createAuction" action="">
-        <section class="createAuction__name">
-            <label class="createAuction__label" for="name">Name</label>
+    <header class="auctionHeader">
+        <h1 class="auctionHeader__title">
+            Create a new auction
+        </h1>
+    </header>
+    <main class="createAuction">
+    <form class="createAuction__form" action="">
+        <section class="createAuction__data --upload">
+            <h2 class="createAuction__label">Image</h2>
+            <label class="createAuction__label --upload" for="image_uploads">
+                <input class="createAuction__input --upload" type="file" id="image_uploads" name="image_uploads" accept=".jpg, .jpeg, .png" multiple />
+            </label>
+        </section>
+        <section>
+        <section class="createAuction__data --artist">
+            <label class="createAuction__label" for="name">Artist</label>
             <input class="createAuction__input" type="text" name="name">
         </section>
-        <section class="createAuction__description">
+        <section class="createAuction__data --title">
+            <label class="createAuction__label" for="name">Title</label>
+            <input class="createAuction__input" type="text" name="name">
+        </section>
+        <section class="createAuction__data --description">
             <label class="createAuction__label" for="description">Description</label>
-            <input class="createAuction__input" type="text" name="description">
+            <input class="createAuction__input --description" type="text" name="description">
         </section>
-        <section class="createAuction__price">
-            <label class="createAuction__label" for="description">Price</label>
-            <input class="createAuction__input" type="number" name="price">
-        </section>
-        <section class="createAuction__expiry">
-            <label class="createAuction__label" for="expiry">Expiry Date</label>
-            <input class="createAuction__input" type="number" name="expiry">
-        </section>
-        <section class="createAuction__category">
+    </section>
+        <section >
+        <section class="createAuction__data --category">
             <label class="createAuction__label" for="category">Category</label>
             <select class="createAuction__select" name="category">
                 <option class="createAuction__categoryOption" value="">Sculpture</option>
                 <option class="createAuction__categoryOption" value="">Painting</option>
             </select>
         </section>
-        <section class="createAuction__images">
-            <button class="button button__admin button__admin--upload">upload images</button>
+        <section class="createAuction__data --price">
+            <label class="createAuction__label" for="description">Starting Price</label>
+            <input class="createAuction__input" type="number" name="price">
+        </section>
+        <section class="createAuction__data --expiry">
+            <label class="createAuction__label" for="start">Expiry Date</label>
+            <input class="createAuction__input" type="date" id="start" name="trip-start" value="2018-07-22" min="2018-01-01" max="2018-12-31" />
+        </section>
+        <input class="createAuction__button" type="submit" value="Create"/>
         </section>
     </form>
+</main>
 </body>
 </html>
