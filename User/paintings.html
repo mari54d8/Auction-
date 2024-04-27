@@ -15,7 +15,7 @@
         <nav class="navBar">
             <a href="" class="navBar__item">Home</a>
             <a href="" class="navBar__item">Sculptures</a>
-            <a href="" class="navBar__item myBids">My bids</a>
+            <a href="#" class="navBar__item myBids">My bids</a>
         </nav>
         <!--<img class="header__profilePicture" src="" alt=""> -->
         <!-- image: by clicking -> "my page" with settings etc. (theoretically, we don't do this) -->
@@ -58,15 +58,22 @@
             </section>
         </article>
     </main>
-<!--
-    <aside class="bids">
-        <h2 class="bids__headline">All your bids:</h2>
-        <section class="bids__products">
-            ------ all products user has bid on here
-            when clicking on it, open detailed product page ------
+    <aside class="cart">
+        <img class="close" src="images/close.png" alt="close">
+        <h2 class="cart__header">All your bids</h2>
+        <span class="cart__line"></span>
+        <section class="listCart">
+            <section class="item">
+                <img class="item__image" src="images/painting1.png" alt="painting">
+                <h2 class="item__title">Salvador Dali</h2>
+                <h3 class="item__subtitle">“The persistence of memory”</h3>
+                <p class="item__price">10.200$</p>
+                <p class="yourPrice">Your bid: 10.000$</p>
+                <p class="item__countdown">Time left: 2 hours 46 minutes</p>
+            </section>
         </section>
     </aside>
---> 
+    <script src="script-myBids.js"></script>
     <footer class="footer  footer--paintings"> <!--har tilføjet de ting vi skal bruge i vore footer-->
         <!-- adresse, kontakt ... -->
         <address class="adress">
