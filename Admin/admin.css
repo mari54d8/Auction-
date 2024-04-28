@@ -8,13 +8,15 @@ body{
 /*---------header----------*/
 .auctionHeader{
     background: #DCC0A5;
-    padding: 64px;
+    padding: 40px;
     text-align: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 .auctionHeader__title{
     color: #321F1C;
     font-family: "Italiana", sans-serif;
-    font-size: 64px;
+    font-size: 48px;
     font-weight: 400;
     margin: 0;
 }
@@ -25,8 +27,9 @@ body{
 }
 
 /*----------Auction Data---------*/
-.auction{
-    padding: 109px;
+.auctions{
+    margin: 40px;
+    margin-bottom: 110px;
 }
 .auction__titles{
     display: grid;
@@ -55,11 +58,16 @@ body{
 }
 .auction__categoryColor{
     width: 9px;
-    height: 69px;
+    height: 100%;
     border-radius: var(--Radius-small, 4px) 0px 0px var(--Radius-small, 4px);
     background: #8C0000;
     border-radius: 4px, 0, 0, 4px;
 }
+
+.auction__categoryColor .--sculpture {
+    background: #000575;
+}
+
 .button__admin--showBids{
     font-size: 16px;
     display: inline-flex;
@@ -89,8 +97,18 @@ body{
 }
 .auction__statusIcon{
     margin-left: 21px;
+    height: 35px;
 }
-.button__admin--createNeAuction{
+
+.auction__artist{
+    margin-right: 5px;
+}
+
+.auction__artTitle{
+    margin-right: 5px;
+}
+
+.button__admin--createNewAuction{
     border-radius: var(--Radius-small, 4px);
     background: var(--Colors-design-palette-ocre, #B97F48);
     display: flex;
@@ -102,8 +120,17 @@ body{
     color: #FFF;
     border-style: none;
     position: fixed;
-    bottom: 64px;
+    bottom: 23px;
     right: 109px;
+    text-decoration: none;
+}
+
+.footer {
+    height: 100px;
+    width: 100svw;
+    position: fixed;
+    bottom: 0;
+    background: #E5D1BE;
 }
 
 /*----------Create Auction----------*/
