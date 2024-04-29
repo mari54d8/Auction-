@@ -11,7 +11,7 @@ console.log(id);
 
 function getJSON() {
    
-    fetch('http://roundhouse.proxy.rlwy.net:54600/items')
+    fetch('http://roundhouse.proxy.rlwy.net:20655/items')
       .then((response) => {
         if (!response.ok) {
           // If the request does not return 300 OK
